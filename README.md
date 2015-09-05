@@ -1,7 +1,7 @@
 ng-tdd
 ---
 
-Learn AngularJS Test Driven Development
+Learn AngularJS Test Driven Development with this book [AngularJS Test-driven Development](http://amzn.to/1NUxWsv)
 
 ## Install karma
 
@@ -43,10 +43,10 @@ npm install bower -g
 bower init
 ```
 
-then install angular via bower 
+then install angular and angular-mocks via bower 
 
 ```
-bower install angular --save
+bower install angular angular-mocks --save
 ```
 
 angular folder will be save on `bower_components` folder.
