@@ -3,9 +3,30 @@ ng-tdd
 
 Learn AngularJS Test Driven Development with this book [AngularJS Test-driven Development](http://amzn.to/1NUxWsv)
 
+## How does it work?
+
+Install dependencies
+
+```
+npm install
+bower install
+```
+
+Run spec test with karma
+
+```
+karma start karma.conf.js
+```
+
+Run e2e test with Protractor
+
+```
+protractor conf.js
+```
+
 ---
 
-# Note
+# My Notes
 
 ## Chapter 2 : The Karma Way
 
@@ -123,3 +144,25 @@ function todoController() {
 ```
 
 - start karma with : `karma start` it should be passed.
+
+## Chapter 3 : End-to-end Testing with Protractor
+
+Ref : [Protractor Website](https://angular.github.io/protractor/#/)
+
+- Install protractor as global
+
+```
+npm install protractor -g
+```
+
+Update Web Driver with :
+
+```
+webdriver-manager update
+```
+
+Now start up a server with :
+
+```
+webdriver-manager start
+```
