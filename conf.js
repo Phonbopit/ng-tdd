@@ -2,6 +2,8 @@
 exports.config = {
   directConnect: true,
 
+  baseUrl: 'http://localhost:5555/',
+
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
@@ -12,7 +14,7 @@ exports.config = {
 
   // Spec patterns are relative to the current working directly when
   // protractor is called.
-  specs: ['confirmConfigTest.js'],
+  specs: ['spec/e2e/**/*.js'],
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {

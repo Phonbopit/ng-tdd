@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Test Driven Development</title>
+</head>
+<body ng-app="todoApp">
+
+	<div class="container">
+		<div ng-controller="TodoController as todo">
+			<ul ng-repeat="item in todo.list">
+				<li>{{item}}</li>
+			</ul>
+
+			<input type="text" ng-model="todo.todoText">
+			<input type="button" value="add" ng-click="todo.add(todo.todoText)">
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="app/todo.js"></script>
+</body>
+</html>

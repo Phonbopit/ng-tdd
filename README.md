@@ -166,3 +166,102 @@ Now start up a server with :
 ```
 webdriver-manager start
 ```
+#### Create index file
+
+- add `index.html`
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Test Driven Development</title>
+</head>
+<body>
+</body>
+</html>
+```
+
+#### Create first e2e test
+
+- Create `conf.js` file on root of project
+
+```
+// An example configuration file.
+exports.config = {
+  directConnect: true,
+
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: {
+    'browserName': 'chrome'
+  },
+
+  // Framework to use. Jasmine 2 is recommended.
+  framework: 'jasmine2',
+
+  // Spec patterns are relative to the current working directly when
+  // protractor is called.
+  specs: ['spec/e2e/**/*.js'],
+
+  // Options to be passed to Jasmine.
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 30000
+  }
+};
+```
+- create a new file named `spec/e2e/todo.js` :
+
+```
+'use strict';
+
+describe('Home Page', function() {
+
+  // Assemble
+  beforeEach(function() {
+
+    // Act
+    browser.get('/');
+  });
+
+  it('items in todo list should be have 3 items', function() {
+    var items = element.all(by.repeater('item in list'));
+
+    // Assert
+    expect(items.count()).toBe(3);
+  });
+})
+```
+
+Install `http-server` module and run at port 5555
+
+```
+npm install http-server -g
+http-server -p 5555
+```
+
+- Update `conf.js` file by add `baseUrl`
+
+```
+  baseUrl: 'http://localhost:5555/',
+```
+
+- Run protractor `protractor conf.js`
+
+**Faied!**
+
+- Add script link to angular in `index.html`
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Test Driven Development</title>
+</head>
+<body ng-app="todoApp">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/todo.js"></script>
+</body>
+</html>
+```

@@ -10,5 +10,7 @@ function todoController() {
 
   vm.add = function(item) {
     vm.list.push(item);
+
+    vm.todoText = '';
   };
 };
