@@ -1,0 +1,10 @@
+{
+  "name": "ng-tdd",
+  "version": "1.0.0",
+  "dependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6"
+  }
+}
