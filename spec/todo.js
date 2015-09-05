@@ -26,4 +26,19 @@ describe('TodoApp', function() {
     expect(scope.todo.list[2]).toEqual('refactor');
   });
 
+  describe('when using a todo list', function() {
+
+    beforeEach(function() {
+      scope.todo.add('repeat');
+    });
+
+    it('should add item to last item in list', function() {
+
+      var lastIndexOfList = scope.todo.list.length - 1;
+      expect(scope.todo.list[lastIndexOfList]).toEqual('repeat');
+
+    });
+
+  });
+
 });
