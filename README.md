@@ -21,6 +21,7 @@ karma start karma.conf.js
 Run e2e test with Protractor
 
 ```
+http-server -p 5555
 protractor conf.js
 ```
 
