@@ -6,5 +6,5 @@ angular.module('todoApp', [])
 function todoController() {
   var vm = this;
 
-  vm.list = [];
+  vm.list = ['test'];
 };
