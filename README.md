@@ -68,3 +68,54 @@ describe('', function () {
     });
 });
 ```
+
+- file `spec/todo.js`
+
+```
+'use strict';
+
+describe('TodoApp', function() {
+
+  beforeEach(module('todoApp'));
+
+  var scope = {};
+
+  beforeEach(inject(function($controller) {
+    $controller('TodoController as todo', { $scope: scope });
+  }));
+
+  it('should define a list object', function() {
+    expect(scope.todo.list).toBeDefined();
+  });
+
+});
+```
+
+- file `app/todo.js`
+
+```
+'ust strict';
+
+angular.module('todoApp', [])
+  .controller('TodoController', todoController);
+
+function todoController() {
+  var vm = this;
+
+  vm.list = [];
+};
+```
+
+- file `karma.conf.js`
+
+```
+...
+// list of files / patterns to load in the browser
+    files: [
+      'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'app/**/*.js',
+      'spec/**/*.js'
+    ],
+    ...
+```
