@@ -3,6 +3,10 @@ ng-tdd
 
 Learn AngularJS Test Driven Development with this book [AngularJS Test-driven Development](http://amzn.to/1NUxWsv)
 
+---
+
+# Note
+
 ## Install karma
 
 ```
@@ -50,3 +54,17 @@ bower install angular angular-mocks --save
 ```
 
 angular folder will be save on `bower_components` folder.
+
+## Test first
+
+- 3 A's (Assemble, Act, and Assert) with following format:
+
+```
+describe('', function () {
+    beforeEach(function(){});
+
+    it('', function() {
+
+    });
+});
+```
