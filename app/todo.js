@@ -6,5 +6,5 @@ angular.module('todoApp', [])
 function todoController() {
   var vm = this;
 
-  vm.list = ['test'];
+  vm.list = ['test', 'execute', 'refactor'];
 };
