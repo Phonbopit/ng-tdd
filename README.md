@@ -7,7 +7,9 @@ Learn AngularJS Test Driven Development with this book [AngularJS Test-driven De
 
 # Note
 
-## Install karma
+## Chapter 2 : The Karma Way
+
+#### Install karma
 
 ```
 npm install karma-cli -g
@@ -19,7 +21,7 @@ By default, when installing karma it will install `karma-chrome-launcher` and `k
 npm install karma-jasmine karma-chrome-launcher --save-dev
 ```
 
-## Init karma
+#### Init karma
 
 Initialized a default configuration by:
 
@@ -27,17 +29,17 @@ Initialized a default configuration by:
 karma init
 ```
 
-## Create a test
+#### Create a test
 
 Create first test inside folder `/test/unit` named `firstTest.js`
 
-## Start karma
+#### Start karma
 
 ```
 karma start karma.conf.js
 ```
 
-## Install AngularJS
+#### Install AngularJS
 
 Before install angularjs must be install bower first,
 
@@ -55,7 +57,7 @@ bower install angular angular-mocks --save
 
 angular folder will be save on `bower_components` folder.
 
-## Test first
+#### Test first
 
 - 3 A's (Assemble, Act, and Assert) with following format:
 
@@ -110,7 +112,7 @@ function todoController() {
 
 ```
 ...
-// list of files / patterns to load in the browser
+    // list of files / patterns to load in the browser
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
@@ -119,3 +121,5 @@ function todoController() {
     ],
     ...
 ```
+
+- start karma with : `karma start` it should be passed.

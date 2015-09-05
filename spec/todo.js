@@ -14,4 +14,8 @@ describe('TodoApp', function() {
     expect(scope.todo.list).toBeDefined();
   });
 
+  it('should define a list object', function() {
+    expect(scope.todo.list[0].toEqual('test'));
+  });
+
 });
